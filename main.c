@@ -21,11 +21,17 @@ int main()
             if (strstr(chaine,type)!=NULL)
 
             {
+                int cpt;
                 char d[] = " ";
+                char son[]="";
                 char *p = strtok(chaine, d);
                 while(p != NULL)
                 {
-                    printf("%s\n", p);
+                    for (int i = 0; i < cpt; ++i)
+                    {
+
+                    }
+                    printf("%c\n", p[0]);
                     p = strtok(NULL, d);
                 }
 
