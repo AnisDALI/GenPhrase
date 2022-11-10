@@ -23,15 +23,29 @@ int main()
             {
                 int cpt;
                 char d[] = " ";
-                char son[]="";
+                int i=0;
+
+                char son[TAILLE_MAX];
                 char *p = strtok(chaine, d);
+                p = strtok(NULL, d);
                 while(p != NULL)
                 {
-                    for (int i = 0; i < cpt; ++i)
+
+                    printf("%s\n", p);
+                    while(son[i]!="\0")
                     {
+                        if(son[i]!=p[0])
+                        {
+                            i++;
+                        }
+                        else
+                        {
+                            i=-1;
+
+                        }
 
                     }
-                    printf("%c\n", p[0]);
+                    p = strtok(NULL, d);
                     p = strtok(NULL, d);
                 }
 
