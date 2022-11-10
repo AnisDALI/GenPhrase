@@ -40,7 +40,7 @@ int main()
     }
     else
     {
-        printf("erreur") ;
+        printf("erreur?") ;
     }
 
     return 0;
