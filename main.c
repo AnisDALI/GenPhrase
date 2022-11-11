@@ -9,6 +9,11 @@ int main()
     FILE* fichier ;
     char chaine[TAILLE_MAX] = ""; // Chaîne vide de taille TAILLE_MAX
     char type[TAILLE_MAX] = "Nom";
+    int bll=0;
+
+    int cpt=0;
+    int i=0;
+    char son[TAILLE_MAX];
     fichier = fopen("C:\\Users\\User\\CLionProjects\\GenPhrase/dico.txt", "r");
     char d[] = " ";
 
@@ -21,24 +26,20 @@ int main()
             if (strstr(chaine,type)!=NULL)
 
             {
-                int bll=0;
-                char d[] = " ";
 
-                int i=0;
-                char son[TAILLE_MAX];
                 char *p = strtok(chaine, d);
                 p = strtok(NULL, d);
                 while(p != NULL)
                 {
-
+                    i=0;
                     printf("%s\n", p);
                     do
                     {
 
                         if(son[i]==p[0])
                         {
-                            bll=1;
 
+                            bll=1;
                         }
 
                         i++;
@@ -48,16 +49,19 @@ int main()
                     if(bll==0)
                     {
 
-                        son[i-1]=p[0];
+                        son[cpt]=p[0];
+                        cpt++;
                     }
 
-                    i=0;
+
+
 
                     p = strtok(NULL, d);
                     p = strtok(NULL, d);
+                    bll=0;
                 }
-
-                while(son[i]!="\0")
+                i=0;
+                while(son[i]!='\0')
                 {
                     printf("%c",son[i]);
                     i++;
@@ -71,6 +75,7 @@ int main()
 
         fclose(fichier);
     }
+
     else
     {
         printf("erreur?") ;
