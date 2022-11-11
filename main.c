@@ -21,10 +21,10 @@ int main()
             if (strstr(chaine,type)!=NULL)
 
             {
-                int cpt;
+                int bll=0;
                 char d[] = " ";
-                int i=0;
 
+                int i=0;
                 char son[TAILLE_MAX];
                 char *p = strtok(chaine, d);
                 p = strtok(NULL, d);
@@ -32,18 +32,31 @@ int main()
                 {
 
                     printf("%s\n", p);
+                    do
+                    {
+
+                        if(son[i]==p[0])
+                        {
+                            bll=1;
+
+                        }
+
+                        i++;
+
+                    }
+                    while(son[i]!='\0');
+
+                    if(bll==0)
+                    {
+
+                        son[i-1]=p[0];
+                    }
+
+                    i=0;
                     while(son[i]!="\0")
                     {
-                        if(son[i]!=p[0])
-                        {
-                            i++;
-                        }
-                        else
-                        {
-                            i=-1;
-
-                        }
-
+                        printf("%c",son[i]);
+                        i++;
                     }
                     p = strtok(NULL, d);
                     p = strtok(NULL, d);
