@@ -8,4 +8,5 @@ stabilisant    stabilisant    Adj:Mas+SG
 stabilisant    stabilisant    Nom:Mas+SG
 stabilisant    stabiliser    Ver:PPre
 stabilisassent    stabiliser    Ver:SImp+PL+P3
-abaissement	abaissement	Nom:Mas+SG
+abaissement	 abaissement	 Nom:Mas+SG
+automatisations	 automatisation	 Nom:Fem+PL

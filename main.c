@@ -25,18 +25,43 @@ int main()
                 char d[] = " ";
 
                 int i=0;
-                char son[]="";
+                char son[TAILLE_MAX];
                 char *p = strtok(chaine, d);
                 p = strtok(NULL, d);
                 while(p != NULL)
                 {
 
                     printf("%s\n", p);
-                    
+                    do
+                    {
+
+                        if(son[i]==p[0])
+                        {
+                            bll=1;
+
+                        }
+
+                        i++;
+
+                    }while(son[i]!='\0');
+
+                    if(bll==0)
+                    {
+
+                        son[i-1]=p[0];
+                    }
+
+                    i=0;
+
                     p = strtok(NULL, d);
                     p = strtok(NULL, d);
                 }
 
+                while(son[i]!="\0")
+                {
+                    printf("%c",son[i]);
+                    i++;
+                }
 
 
             }
