@@ -32,7 +32,7 @@ int main()
                 while(p != NULL)
                 {
                     i=0;
-                    printf("%s\n", p);
+
                     do
                     {
 
@@ -60,19 +60,16 @@ int main()
                     p = strtok(NULL, d);
                     bll=0;
                 }
-                i=0;
-                while(son[i]!='\0')
-                {
-                    printf("%c",son[i]);
-                    i++;
-                }
+
+
+
 
 
             }
 
 
         }
-
+        printf("%s",son);
         fclose(fichier);
     }
 
