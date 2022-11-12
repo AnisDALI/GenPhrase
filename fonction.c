@@ -92,7 +92,7 @@ char* trvFils(char* type,char* chemin)
     FILE* fichier ;
     char chaine[TAILLE_MAX] = ""; // Chaîne vide de taille TAILLE_MAX
     int bll=0;
-    srand( time( NULL ) );
+
     int rdm;
     int cpt=0;
     int i=0;
@@ -163,9 +163,14 @@ char* trvFils(char* type,char* chemin)
         char result= son[rdm];
 
         printf("%c",result);
-        strcat(chemin,result);
+        for(i=0;chemin[i]!="\0";i++)
+        {
+
+        }
+        chemin[i-1]=result;
+
         printf("sqdfqsdf");
-        printf("%s",chemin);
+
         return chemin;
 
     }
