@@ -1,5 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include <stdbool.h>
+#include <time.h>
 
-char parcourFichier(char type,)
+#define TAILLE_MAX 100000 // Tableau de taille 100000
+
+char parcourFichier(char type[TAILLE_MAX]);
