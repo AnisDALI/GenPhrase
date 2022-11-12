@@ -1,4 +1,5 @@
 stabilimetre    stabilimetre    Nom:Mas+SG
+substitutions	substitution	Nom:Fem+PL
 stabilisaient    stabiliser    Ver:IImp+PL+P3
 stabilisais    stabiliser    Ver:IImp+SG+P1:IImp+SG+P2
 stabilisai    stabiliser    Ver:IPSim+SG+P1
