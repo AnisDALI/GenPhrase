@@ -161,13 +161,9 @@ char* trvFils(char* type,char* chemin)
         fclose(fichier);
 
         char result= son[rdm];
-
+        printf("%c",chemin);
         printf("%c",result);
-        for(i=0;chemin[i]!="\0";i++)
-        {
 
-        }
-        chemin[i-1]=result;
 
         printf("sqdfqsdf");
 
