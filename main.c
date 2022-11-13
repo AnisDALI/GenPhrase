@@ -13,7 +13,7 @@ int main()
 
     printf("%c\n", test);
     char* fils;
-    fils=trvFils("Nom",test);
+    fils= trvDeuxiemeFils("Nom",test);
     printf("%s", fils);
     return 0;
 }

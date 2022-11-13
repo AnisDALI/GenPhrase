@@ -87,7 +87,7 @@ char* trvRacine(char type[TAILLE_MAX])
 
 
 
-char* trvFils(char* type,char* chemin)
+char* trvDeuxiemeFils(char* type,char* chemin)
 {
     FILE* fichier ;
     char chaine[TAILLE_MAX] = ""; // Chaîne vide de taille TAILLE_MAX

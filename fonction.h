@@ -7,4 +7,4 @@
 #define TAILLE_MAX 100000 // Tableau de taille 100000
 
 char* trvRacine(char type[TAILLE_MAX]);
-char* trvFils(char* type,char* chemin);
+char* trvDeuxiemeFils(char* type,char* chemin);
