@@ -15,5 +15,7 @@ int main()
     char* fils;
     fils= trvDeuxiemeFils("Nom",test);
     printf("%s", fils);
+
+    printf("%s", trvFils("Nom","st",2));
     return 0;
 }

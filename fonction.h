@@ -8,3 +8,4 @@
 
 char* trvRacine(char type[TAILLE_MAX]);
 char* trvDeuxiemeFils(char* type,char* chemin);
+char* trvFils(char* type,char* chemin,int hauteur);
