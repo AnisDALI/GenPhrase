@@ -69,7 +69,7 @@ char* trvRacine(char type[TAILLE_MAX])
         }
 
         rdm = rand() % cpt;
-        printf("%d",rdm);
+
 
         fclose(fichier);
         char result= son[rdm];
@@ -111,39 +111,48 @@ char* trvFils(char* type,char* chemin)
 
             {
 
+
                 char *p = strtok(chaine, d);
                 p = strtok(NULL, d);
+
+
                 while(p != NULL)
                 {
-                    i=0;
-
-                    do
+                    if (p[0]==chemin)
                     {
 
-                        if(son[i]==p[0])
+
+                        i=0;
+
+                        do
                         {
 
-                            bll=1;
+                            if(son[i]==p[1])
+                            {
+
+                                bll=1;
+                            }
+
+                            i++;
+
+                        }while(son[i]!='\0');
+
+                        if(bll==0)
+                        {
+
+                            son[cpt]=p[1];
+                            cpt++;
+
                         }
 
-                        i++;
 
-                    }while(son[i]!='\0');
 
-                    if(bll==0)
-                    {
 
-                        son[cpt]=p[0];
-                        cpt++;
-
+                        p = strtok(NULL, d);
+                        p = strtok(NULL, d);
+                        bll=0;
                     }
 
-
-
-
-                    p = strtok(NULL, d);
-                    p = strtok(NULL, d);
-                    bll=0;
                 }
 
 
@@ -156,24 +165,31 @@ char* trvFils(char* type,char* chemin)
         }
 
         rdm = rand() % cpt;
-        printf("%d",rdm);
+
 
         fclose(fichier);
 
         char result= son[rdm];
-        printf("%c",chemin);
         printf("%c",result);
+        char conca[2];
+        conca[0]=chemin;
+        conca[1]=result;
+        printf("%s",conca);
 
 
-        printf("sqdfqsdf");
+
+
 
         return chemin;
 
     }
 
     else {
+
+
         printf("erreur?");
         return 0;
+
     }
 
 
