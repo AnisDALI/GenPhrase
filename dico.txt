@@ -1,3 +1,4 @@
+automatisations	 automatisation	 Nom:Fem+PL
 stabilimetre    stabilimetre    Nom:Mas+SG
 substitutions	substitution	Nom:Fem+PL
 stabilisaient    stabiliser    Ver:IImp+PL+P3
@@ -10,4 +11,4 @@ stabilisant    stabilisant    Nom:Mas+SG
 stabilisant    stabiliser    Ver:PPre
 stabilisassent    stabiliser    Ver:SImp+PL+P3
 abaissement	 abaissement	 Nom:Mas+SG
-automatisations	 automatisation	 Nom:Fem+PL
+

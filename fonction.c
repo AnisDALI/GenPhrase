@@ -114,13 +114,14 @@ char* trvFils(char* type,char* chemin)
 
                 char *p = strtok(chaine, d);
                 p = strtok(NULL, d);
+                char prm = chemin;
 
 
                 while(p != NULL)
                 {
-                    if (p[0]==chemin)
-                    {
 
+                    if (p[0]==prm)
+                    {
 
                         i=0;
 
@@ -148,10 +149,12 @@ char* trvFils(char* type,char* chemin)
 
 
 
-                        p = strtok(NULL, d);
-                        p = strtok(NULL, d);
+
                         bll=0;
                     }
+                    p = strtok(NULL, d);
+                    p = strtok(NULL, d);
+
 
                 }
 
@@ -170,8 +173,8 @@ char* trvFils(char* type,char* chemin)
         fclose(fichier);
 
         char result= son[rdm];
-        printf("%c",result);
-        char conca[2];
+
+        char conca[TAILLE_MAX];
         conca[0]=chemin;
         conca[1]=result;
         printf("%s",conca);
@@ -180,7 +183,7 @@ char* trvFils(char* type,char* chemin)
 
 
 
-        return chemin;
+        return conca;
 
     }
 
