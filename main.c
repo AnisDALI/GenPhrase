@@ -4,9 +4,9 @@
 
 int main()
 {
-    afficherType("Nom");
-    afficherType("Adj");
-    afficherType("Ver");
+    printf("%s ", afficherType("Nom"));
+    printf("%s ",afficherType("Adj"));
+    printf("%s ",afficherType("Ver"));
 
 
 
