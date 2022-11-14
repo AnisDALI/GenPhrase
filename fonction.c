@@ -399,10 +399,13 @@ char* afficherType(char* type)
 
 void menu()
 {
+
     int var;
     int choix;
     srand( time( NULL ) );
+    c_textcolor(LIGHTBLUE);
     printf("================| GENERATEUR DE PHRASE |================\n\n");
+    c_textcolor(WHITE);
     printf("Choisissez un modele:\n\n");
     printf("Modele 1 : nom - adjectif - verbe - nom \n");
     printf("Modele 2 : nom - qui - verbe - verbe - nom - adjectif \n\n");
@@ -410,16 +413,18 @@ void menu()
     do {
         printf("Votre choix :");
         var = scanf("%d", &choix);
+        printf("\n");
         int c;
         if (var == 0 || choix < 1 || choix > 2) {
-
+            c_textcolor(RED);
             printf("Veuillez entrer 1 ou 2:\n");
+            c_textcolor(WHITE);
 
         }
         while ((c = getchar()) != '\n' && c != EOF);
     } while (var == 0 || choix < 1 || choix > 2);
 
-
+    c_textcolor(YELLOW);
     switch (choix) {
         case 1: {
 
