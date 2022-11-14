@@ -12,7 +12,7 @@ char* trvRacine(char type[TAILLE_MAX])
     int cpt=0;
     int i=0;
     char son[TAILLE_MAX]="";
-    fichier = fopen("C:\\Users\\User\\CLionProjects\\GenPhrase/dico.txt", "r");
+    fichier = fopen("C:\\Users\\anis9\\CLionProjects\\GenPhrase/dico.txt", "r");
     char d[] = " ";
 
     if (fichier != NULL)
@@ -97,7 +97,7 @@ char* trvDeuxiemeFils(char* type,char* chemin)
     int cpt=0;
     int i=0;
     char son[TAILLE_MAX]="";
-    fichier = fopen("C:\\Users\\User\\CLionProjects\\GenPhrase/dico.txt", "r");
+    fichier = fopen("C:\\Users\\anis9\\CLionProjects\\GenPhrase/dico.txt", "r");
     char d[] = " ";
 
 
@@ -177,13 +177,14 @@ char* trvDeuxiemeFils(char* type,char* chemin)
         char conca[TAILLE_MAX];
         conca[0]=chemin;
         conca[1]=result;
-        printf("%s",conca);
+        printf("%s\n",conca);
+        char* chm=conca;
 
 
 
 
 
-        return conca;
+        return chm;
 
     }
 
@@ -210,7 +211,7 @@ char* trvFils(char* type,char* chemin,int hauteur)
     int cpt=0;
     int i=0;
     char son[TAILLE_MAX]="";
-    fichier = fopen("C:\\Users\\User\\CLionProjects\\GenPhrase/dico.txt", "r");
+    fichier = fopen("C:\\Users\\anis9\\CLionProjects\\GenPhrase/dico.txt", "r");
     char d[] = " ";
 
 
@@ -238,7 +239,7 @@ char* trvFils(char* type,char* chemin,int hauteur)
                        if(chemin[i]!=p[i])
                        {
                            deb=1;
-                           break;
+
                        }
                        i++;
                     }
@@ -294,13 +295,13 @@ char* trvFils(char* type,char* chemin,int hauteur)
 
 
         fclose(fichier);
-        printf("%s",son);
+        printf("%s\n",son);
         char result= son[rdm];
-        printf("%c",result);
+
 
         chemin[hauteur]=result;
 
-        printf("%s",chemin);
+        printf("%s\n",chemin);
 
 
 

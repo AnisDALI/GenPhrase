@@ -8,14 +8,20 @@ int main()
 
     char* test;
     char mot[TAILLE_MAX];
-    int hauteur=0;
+    int hauteur=2;
     test = trvRacine("Nom");
+    char* Pfils;
+    char* fils;
 
     printf("%c\n", test);
-    char* fils;
-    fils= trvDeuxiemeFils("Nom",test);
-    printf("%s", fils);
 
-    printf("%s", trvFils("Nom","st",2));
+    Pfils= trvDeuxiemeFils("Nom",test);
+
+
+    fils=trvFils("Nom",Pfils,hauteur);
+    hauteur++;
+
+
+
     return 0;
 }

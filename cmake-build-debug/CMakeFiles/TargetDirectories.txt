@@ -1,3 +1,3 @@
-C:/Users/User/CLionProjects/GenPhrase/cmake-build-debug/CMakeFiles/PROJET.dir
-C:/Users/User/CLionProjects/GenPhrase/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/User/CLionProjects/GenPhrase/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/anis9/CLionProjects/GenPhrase/cmake-build-debug/CMakeFiles/PROJET.dir
+C:/Users/anis9/CLionProjects/GenPhrase/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/anis9/CLionProjects/GenPhrase/cmake-build-debug/CMakeFiles/rebuild_cache.dir
