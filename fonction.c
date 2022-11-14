@@ -7,7 +7,7 @@ char trvRacine(char type[TAILLE_MAX])
     char chaine[TAILLE_MAX] = ""; // Chaîne vide de taille TAILLE_MAX
 
     int bll=0;
-    srand( time( NULL ) );
+
     int rdm;
     int cpt=0;
     int i=0;
@@ -232,6 +232,7 @@ MOT trvFils(char* type,MOT chemin,int hauteur)
     FILE* fichier ;
     char chaine[TAILLE_MAX] = ""; // Chaîne vide de taille TAILLE_MAX
     int bll=0;
+
     int deb=0;
     int rdm;
     int cpt=0;

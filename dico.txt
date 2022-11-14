@@ -11,7 +11,6 @@ stabilisant    stabilisant    Nom:Mas+SG
 stabilisant    stabiliser    Ver:PPre
 stabilisassent    marcher    Ver:SImp+PL+P3
 abaissement	 abaissement Nom:Mas+SG
-stabilimetre    a    Nom:Mas+SG
 stabilisant    gros   Adj:Mas+SG
 abattement	abattement	Nom:Mas+SG
 restringent	restringent	Nom:Mas+SG
