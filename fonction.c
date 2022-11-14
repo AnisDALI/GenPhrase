@@ -226,7 +226,7 @@ char* trvFils(char* type,char* chemin,int hauteur)
             {
 
 
-                char *p = strtok(chaine, d);
+                char *p = strtok(chaine, d); //corriger
                 p = strtok(NULL, d);
                 char prm = chemin;
 
