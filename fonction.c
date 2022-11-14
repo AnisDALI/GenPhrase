@@ -1,7 +1,7 @@
 
 #include "fonction.h"
 
-char* trvRacine(char type[TAILLE_MAX])
+char trvRacine(char type[TAILLE_MAX])
 {
     FILE* fichier ;
     char chaine[TAILLE_MAX] = ""; // Chaîne vide de taille TAILLE_MAX
@@ -73,13 +73,15 @@ char* trvRacine(char type[TAILLE_MAX])
 
         fclose(fichier);
         char result= son[rdm];
+        MOT mot;
+        mot.chemin=result;
         return result;
 
     }
 
     else {
         printf("erreur?");
-        return 0;
+
     }
 
 
@@ -87,7 +89,7 @@ char* trvRacine(char type[TAILLE_MAX])
 
 
 
-char* trvDeuxiemeFils(char* type,char* chemin)
+MOT trvDeuxiemeFils(char* type,char chemin)
 {
     FILE* fichier ;
     char chaine[TAILLE_MAX] = ""; // Chaîne vide de taille TAILLE_MAX
@@ -138,11 +140,21 @@ char* trvDeuxiemeFils(char* type,char* chemin)
 
                         }while(son[i]!='\0');
 
+
                         if(bll==0)
                         {
+                            if(p[1]=='\0')
+                            {
+                                son[cpt]="Z";
+                                cpt++;
+                            }
+                            else
+                            {
+                                son[cpt]=p[1];
+                                cpt++;
 
-                            son[cpt]=p[1];
-                            cpt++;
+                            }
+
 
                         }
 
@@ -168,23 +180,32 @@ char* trvDeuxiemeFils(char* type,char* chemin)
         }
 
         rdm = rand() % cpt;
-
+        MOT mot;
 
         fclose(fichier);
-
-        char result= son[rdm];
-
         char conca[TAILLE_MAX];
-        conca[0]=chemin;
-        conca[1]=result;
-        printf("%s\n",conca);
-        char* chm=conca;
+        char result= son[rdm];
+        if(result=="Z")
+        {
+            mot.fini=1;
+            mot.chemin=chemin;
+            return mot;
+        }
+        else
+        {
+            conca[0]=chemin;
+            conca[1]=result;
+            printf("%s\n",conca);
+            mot.chemin=conca;
+
+            return mot;
+        }
 
 
 
 
 
-        return chm;
+
 
     }
 
@@ -192,7 +213,7 @@ char* trvDeuxiemeFils(char* type,char* chemin)
 
 
         printf("erreur?");
-        return 0;
+
 
     }
 
@@ -201,7 +222,7 @@ char* trvDeuxiemeFils(char* type,char* chemin)
 
 
 
-char* trvFils(char* type,char* chemin,int hauteur)
+MOT trvFils(char* type,MOT chemin,int hauteur)
 {
     FILE* fichier ;
     char chaine[TAILLE_MAX] = ""; // Chaîne vide de taille TAILLE_MAX
@@ -228,15 +249,15 @@ char* trvFils(char* type,char* chemin,int hauteur)
 
                 char *p = strtok(chaine, d); //corriger
                 p = strtok(NULL, d);
-                char prm = chemin;
+                char prm = chemin.chemin;
 
 
                 while(p != NULL)
                 {
                     i=0;
-                    while(chemin[i]!='\0')
+                    while(chemin.chemin[i]!='\0')
                     {
-                       if(chemin[i]!=p[i])
+                       if(chemin.chemin[i]!=p[i])
                        {
                            deb=1;
 
@@ -260,7 +281,11 @@ char* trvFils(char* type,char* chemin,int hauteur)
                             i++;
 
                         }while(son[i]!='\0');
-
+                        if(p[1]=='\0')
+                        {
+                            son[cpt]='Z';
+                            cpt++;
+                        }
                         if(bll==0)
                         {
 
@@ -297,11 +322,16 @@ char* trvFils(char* type,char* chemin,int hauteur)
         fclose(fichier);
         printf("%s\n",son);
         char result= son[rdm];
+        if(result=='Z')
+        {
+            chemin.fini=1;
 
+            return chemin;
+        }
 
-        chemin[hauteur]=result;
+        chemin.chemin[hauteur]=result;
 
-        printf("%s\n",chemin);
+        printf("%s\n",chemin.chemin);
 
 
 
@@ -315,11 +345,38 @@ char* trvFils(char* type,char* chemin,int hauteur)
 
 
         printf("erreur?");
-        return 0;
+
 
     }
 
 
+}
+
+
+void afficherType(char* type)
+{
+    char test;
+    int i=0;
+    char mot[TAILLE_MAX];
+    int hauteur=2;
+    test = trvRacine(type);
+    MOT Pfils;
+    MOT fils;
+
+    printf("%c\n", test);
+
+    Pfils= trvDeuxiemeFils(type,test);
+
+
+    fils=trvFils(type,Pfils,hauteur);
+    hauteur++;
+    while(fils.fini!=1)
+    {
+        fils=trvFils(type,fils,hauteur);
+        hauteur++;
+
+    }
+    return;
 }
 
 
