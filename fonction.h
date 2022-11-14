@@ -9,7 +9,7 @@
 typedef struct
 {
     int fini;
-    char* chemin
+    char* chemin;
 } MOT;
 
 char trvRacine(char type[TAILLE_MAX]);

@@ -4,9 +4,11 @@
 
 int main()
 {
-
-    afficherType("Adj");
     afficherType("Nom");
+    afficherType("Adj");
+    afficherType("Ver");
+
+
 
 
 

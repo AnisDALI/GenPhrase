@@ -182,19 +182,23 @@ MOT trvDeuxiemeFils(char* type,char chemin)
         rdm = rand() % cpt;
         MOT mot;
 
+
         fclose(fichier);
-        char conca[TAILLE_MAX];
+        char conca[TAILLE_MAX]="";
         char result= son[rdm];
         if(result=="Z")
         {
             mot.fini=1;
             mot.chemin=chemin;
+
             return mot;
+
         }
         else
         {
             conca[0]=chemin;
             conca[1]=result;
+
             printf("%s\n",conca);
             mot.chemin=conca;
 
@@ -277,10 +281,15 @@ MOT trvFils(char* type,MOT chemin,int hauteur)
 
                                 bll=1;
                             }
+                            if(p[hauteur]=='\0'&& son[i]=='Z')
+                            {
+                                bll=1;
 
+                            }
                             i++;
 
                         }while(son[i]!='\0');
+
                         if(p[hauteur]=='\0')
                         {
 
@@ -358,18 +367,26 @@ void afficherType(char* type)
 {
     char test;
     int i=0;
-    char mot[TAILLE_MAX];
+
     int hauteur=2;
     test = trvRacine(type);
+
     MOT Pfils;
+
     MOT fils;
 
     printf("%c\n", test);
 
+
     Pfils= trvDeuxiemeFils(type,test);
+    if(Pfils.fini==1)
+    {
+        return;
+    }
 
 
     fils=trvFils(type,Pfils,hauteur);
+
     hauteur++;
     while(fils.fini!=1)
     {
@@ -378,6 +395,7 @@ void afficherType(char* type)
 
 
     }
+    printf("TERMINE\n\n");
     return;
 }
 
