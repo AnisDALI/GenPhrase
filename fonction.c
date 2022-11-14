@@ -399,14 +399,26 @@ char* afficherType(char* type)
 
 void menu()
 {
+    int var;
     int choix;
     srand( time( NULL ) );
     printf("================| GENERATEUR DE PHRASE |================\n\n");
     printf("Choisissez un modele:\n\n");
     printf("Modele 1 : nom - adjectif - verbe - nom \n");
     printf("Modele 2 : nom - qui - verbe - verbe - nom - adjectif \n\n");
-    printf("Votre choix :");
-    scanf("%d",&choix);
+
+    do {
+        printf("Votre choix :");
+        var = scanf("%d", &choix);
+        int c;
+        if (var == 0 || choix < 1 || choix > 2) {
+
+            printf("Veuillez entrer 1 ou 2:\n");
+
+        }
+        while ((c = getchar()) != '\n' && c != EOF);
+    } while (var == 0 || choix < 1 || choix > 2);
+
 
     switch (choix) {
         case 1: {
