@@ -98,9 +98,10 @@ MOT trvDeuxiemeFils(char* type,char chemin)
     int rdm;
     int cpt=0;
     int i=0;
+    char d[] = " ";
     char son[TAILLE_MAX]="";
     fichier = fopen("C:\\Users\\anis9\\CLionProjects\\GenPhrase/dico.txt", "r");
-    char d[] = " ";
+
 
 
     if (fichier != NULL)

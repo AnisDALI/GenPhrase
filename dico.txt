@@ -1,6 +1,6 @@
 stabilimetre    stabilimetre    Nom:Mas+SG
 automatisations	 automatisation	 Nom:Fem+PL
-automatisations	 aubomatisation	 Nom:Fem+PL
+automatisations	 aubomatisation Nom:Fem+PL
 substitutions	substitution	Nom:Fem+PL
 stabilisaient    stabiliser    Ver:IImp+PL+P3
 stabilisais    stabiliser    Ver:IImp+SG+P1:IImp+SG+P2
@@ -10,7 +10,12 @@ stabilisames    stabiliser    Ver:IPSim+PL+P1
 stabilisant    stabilisant    Nom:Mas+SG
 stabilisant    stabiliser    Ver:PPre
 stabilisassent    marcher    Ver:SImp+PL+P3
-abaissement	 abaissement	 Nom:Mas+SG
+abaissement	 abaissement Nom:Mas+SG
 stabilimetre    a    Nom:Mas+SG
 stabilisant    gros   Adj:Mas+SG
-
+abattement	abattement	Nom:Mas+SG
+restringent	restringent	Nom:Mas+SG
+tressautement	tressautement	Nom:Mas+SG
+violiste violiste Nom:InvGen+SG
+chagrine chagriner Ver:PPas+Mas+SG
+cesariennes	 cesarien Adj:Fem+PL
