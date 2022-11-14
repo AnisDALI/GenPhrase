@@ -33,8 +33,7 @@ char trvRacine(char type[TAILLE_MAX])
 
                     do
                     {
-
-                        if(son[i]==p[0])
+                       if(son[i]==p[0])
                         {
 
                             bll=1;
@@ -50,10 +49,6 @@ char trvRacine(char type[TAILLE_MAX])
                         son[cpt]=p[0];
                         cpt++;
                     }
-
-
-
-
                     p = strtok(NULL, d);
                     p = strtok(NULL, d);
                     bll=0;
