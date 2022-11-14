@@ -16,5 +16,6 @@ char trvRacine(char type[TAILLE_MAX]);
 MOT trvDeuxiemeFils(char* type,char chemin);
 MOT trvFils(char* type,MOT chemin,int hauteur);
 char* afficherType(char* type);
+void menu();
 
 
