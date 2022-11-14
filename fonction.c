@@ -281,8 +281,9 @@ MOT trvFils(char* type,MOT chemin,int hauteur)
                             i++;
 
                         }while(son[i]!='\0');
-                        if(p[1]=='\0')
+                        if(p[hauteur]=='\0')
                         {
+
                             son[cpt]='Z';
                             cpt++;
                         }
@@ -325,7 +326,7 @@ MOT trvFils(char* type,MOT chemin,int hauteur)
         if(result=='Z')
         {
             chemin.fini=1;
-
+            printf("fini\n");
             return chemin;
         }
 
@@ -374,6 +375,7 @@ void afficherType(char* type)
     {
         fils=trvFils(type,fils,hauteur);
         hauteur++;
+
 
     }
     return;
