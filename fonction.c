@@ -408,21 +408,22 @@ void menu()
     c_textcolor(WHITE);
     printf("Choisissez un modele:\n\n");
     printf("Modele 1 : nom - adjectif - verbe - nom \n");
-    printf("Modele 2 : nom - qui - verbe - verbe - nom - adjectif \n\n");
+    printf("Modele 2 : nom - qui - verbe - verbe - nom - adjectif \n");
+    printf("Modele 3 : adjectif - nom - verbe - adjectif - nom \n\n");
 
     do {
         printf("Votre choix :");
         var = scanf("%d", &choix);
         printf("\n");
         int c;
-        if (var == 0 || choix < 1 || choix > 2) {
+        if (var == 0 || choix < 1 || choix > 3) {
             c_textcolor(RED);
-            printf("Veuillez entrer 1 ou 2:\n");
+            printf("Veuillez entrer un nombre entre 1 et 3:\n");
             c_textcolor(WHITE);
 
         }
         while ((c = getchar()) != '\n' && c != EOF);
-    } while (var == 0 || choix < 1 || choix > 2);
+    } while (var == 0 || choix < 1 || choix > 3);
 
     c_textcolor(YELLOW);
     switch (choix) {
@@ -441,6 +442,14 @@ void menu()
             printf("%s ",afficherType("Ver"));
             printf("%s ", afficherType("Nom"));
             printf("%s\n\n",afficherType("Adj"));
+            break;
+        }
+        case 3: {
+            printf("%s ", afficherType("Adj"));
+            printf("%s ",afficherType("Nom"));
+            printf("%s ",afficherType("Ver"));
+            printf("%s ",afficherType("Adj"));
+            printf("%s\n\n", afficherType("Nom"));
             break;
         }
     }
