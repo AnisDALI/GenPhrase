@@ -11,7 +11,7 @@ char trvRacine(char type[TAILLE_MAX])
     int cpt=0;
     int i=0;
     char son[TAILLE_MAX]="";
-    fichier = fopen("C:\\Users\\anis9\\CLionProjects\\GenPhrase/dico.txt", "r");
+    fichier = fopen("../dico.txt", "r");
     char d[] = " "; //separateur de mot
 
     if (fichier != NULL) //On verrifie que le fichier n'est pas vide
@@ -93,7 +93,7 @@ MOT trvDeuxiemeFils(char* type,char prm)
     int i=0;
     char d[] = " ";
     char son[TAILLE_MAX]="";
-    fichier = fopen("C:\\Users\\anis9\\CLionProjects\\GenPhrase/dico.txt", "r");
+    fichier = fopen("../dico.txt", "r");
 
 
 
@@ -231,7 +231,7 @@ MOT trvFils(char* type,MOT chemin,int hauteur)
     int cpt=0;
     int i=0;
     char son[TAILLE_MAX]="";
-    fichier = fopen("C:\\Users\\anis9\\CLionProjects\\GenPhrase/dico.txt", "r");
+    fichier = fopen("../dico.txt", "r");
     char d[] = " ";
 
 
